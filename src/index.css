@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.personCard {
+  height: 600px;
+  width: calc(32%);
+}
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
