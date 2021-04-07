@@ -5,7 +5,7 @@ import Header from './components/header'
 import PeopleList from './components/peopleList'
 
 const  MainRick =  () => {
-    const [data, setData] = useState<any>(null)
+    const [data, setData] = useState<any[]>([])
     const [loading, setLoading] = useState<boolean>(true)
     const [error, setError] = useState<any>(null)
     const callInfo = async () => {
@@ -13,8 +13,7 @@ const  MainRick =  () => {
         const _data = await axios.get('https://rickandmortyapi.com/api/character')
         const validate = _data !== null && _data !== undefined && _data.data && _data.data.results
         if(validate) {
-            const _info = JSON.stringify(_data)
-          setData(_info)
+          setData(_data.data.results)
         }
     } catch (error) {
         setError(error)
@@ -26,7 +25,7 @@ useEffect(() => {
    callInfo()
     
 }, [])
-const validation = data !== null
+const validation = data !== null && !loading
     return (
         <div className="h-screen">
             <Header />
