@@ -5,7 +5,7 @@ const PeopleList = ({data}:{data: string}) => {
     const _data: any = JSON.parse(data)
 
     return (
-        <section className="w-screen flex items-center flex-col bg-darkBackground h-full">
+        <section className="w-screen flex items-center flex-col pt-7 bg-darkBackground ">
             <div>
 
             </div>

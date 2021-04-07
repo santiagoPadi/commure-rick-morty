@@ -19,11 +19,17 @@ module.exports = {
       10: "10px",
       normal: "0.625rem",
     },
+    fontFamily: {
+      opensans: ["opensans"],
+    },
 
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      padding: ["first", "last"],
+      borderWidth: ["first", "last"],
+    },
   },
   plugins: [],
 }

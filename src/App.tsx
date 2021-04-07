@@ -4,7 +4,7 @@ import MainRick from './modules/main';
 
 function App() {
   return (
-    <div className="w-full h-full flex justify-center items-center">
+    <div className="w-full flex justify-center items-center">
      <MainRick />
     </div>
   );

@@ -1,8 +1,28 @@
+@font-face {
+	font-family: 'opensans';
+	src: url('./assets/fonts/OpenSans-Light.ttf') ;
+  src: url('./assets/fonts/OpenSans-Regular.ttf') ;
+	src: url('./assets/fonts/OpenSans-SemiBold.ttf') ;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+section,
+article {
+	@apply font-opensans;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'opensans';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,10 +37,13 @@ code {
   align-items:center;
 }
 
-.personCard {
-  height: 600px;
-  width: calc(32%);
+.person:nth-child(3n+3) {
+  padding-right: 0px;
 }
+.person:nth-child(3n+1) {
+  padding-left: 0px;
+}
+
 /* ./src/index.css */
 @tailwind base;
 @tailwind components;
