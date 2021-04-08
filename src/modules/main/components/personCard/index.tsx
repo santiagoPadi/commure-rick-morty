@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PersonCard = (person: { name: string, image: string, status: string, species: string, gender: string, origin: any, location: any }) => {
+const PersonCard = (person: { name: string, image: string, status: string, species: string, gender: string, origin: any, location: any, episode: any[] }) => {
     const { name, image, status, species, gender, origin, location } = person
     const infoPerson = [
         { label: 'STATUS', value: status },
@@ -26,7 +26,6 @@ const PersonCard = (person: { name: string, image: string, status: string, speci
                         <p className="text-orangeTexts text-sm text-wrap text-right">{info.value}</p>
                     </div>
                 ))}
-
             </div>
         </div>
         </div>

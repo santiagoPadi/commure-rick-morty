@@ -1,5 +1,5 @@
-import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { ordering } from '../../utils/bubbleorder'
 import { useFetch } from '../../utils/useFetch'
 import Header from './components/header'
 import PeopleList from './components/peopleList'
@@ -11,7 +11,8 @@ const  MainRick =  () => {
 useEffect(() => {
     const validate = data !== null && data !== undefined && data.data && data.data.results
             if(validate) {
-                setinfo(data.data.results)
+                const ordered = ordering(data.data.results)
+                setinfo(ordered)
             }
     
 }, [data])
